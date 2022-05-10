@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>My portfolio</title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="./jquery.animatedheadline.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<style media="screen">
+		html,body{
+			font-family: 'Ubuntu', sans-serif;
+			color: #333;
+		}
+		.second-font{
+			font-family: sans-serif;
+			color: #777;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 28px;
+		
+		}
+		.owl-carousel .owl-item img {
+			width: 150px; 
+		}
+		.main-color{
+			background-color:#fa5b0f;
+		}
+		.main-text-color{
+			color:#fa5b0f;
+		}
+		.white-text-color{
+			color:#ffffff;
+		}
+
+		.grey-text-color{
+			    color: #777777;
+		}
+
+		#my_photo{
+			border: 4px solid #fff;
+			box-shadow: 0 0 5px 3px rgb(0 0 0 / 10%);
+		}
+
+		.photo_div{
+			height:25rem;
+		}
+		.right-side ul li a i {
+			line-height: 36px;
+			font-size: 20px;
+		}
+		.title-bg{
+			font-size: 120px;
+			letter-spacing: 10px;
+			color: rgba(30, 37, 48, 0.07);
+			left: 0;
+			line-height: 0.7;
+			right: 0;
+			top: -1rem;
+			font-weight: 900;
+		}
+		.title h2{
+			font-weight: 900;
+			color: #555;
+			font-size: 55px;
+			line-height: 55px;
+		}
+		.resume-list-item-title h6:hover{
+			color:white;
+			background-color:#fa5b0f;
+
+		}
+
+		.carousel-item img{
+			width : 18rem;
+		}
+
+		.nav-link:focus {
+			background-color: #fa5b0f;
+			color : white;
+		}
+		.nav-link:hover {
+			background-color: white;
+			color: gray;
+		}
+		.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+			background-color: #fa5b0f;
+			color:white
+		}
+
+		.li-item-height{
+			line-height: 35px;
+			font-weight: 400;
+			font-size: 20px;
+		}
+		.caption h6 {
+			border-left: 3px solid #fa5b0f;
+		}
+		@media only screen and (min-width: 768px) {
+			.margin-negative-img{
+				margin-bottom: -6rem;
+			}
+		}
+		.social-icons-parent{
+			height: 2rem;
+			width: 2rem;
+		}
+		.font-main {
+			font-size: 23px;
+		}
+		.font-main-bold {
+			font-size: 42px;
+			font-weight: bolder;
+		}
+		/*.row input{
+			font-size: 10px;
+			color: blue;*/
+		}
+		.post-date{
+			color: rgba(30, 37, 48, 0.07);
+		}
+		::placeholder {
+  			color: blue;
+ 			font-size:0.8em;
+		}
+		.btn-down:hover {
+		    color: white;
+		    background-color: #fa5b0f;
+		    
+		}
+		.btn-sec-light:hover {
+		    color:white;
+		    background-color:#fa5b0f;
+		  
+		}
+		.btn-sec-light {
+		    color:#fa5b0f;
+		    background-color:white;
+		    border-color:#fa5b0f;
+		  
+		}
+
+		.custom-hover:hover{
+			opacity: 50%;
+			background: rgba(250, 91, 15,.7);
+		}
+
+
+		.latest-img{
+			overflow: hidden;
+		}
+
+		.latest-img img:hover{
+			  -webkit-transform: scale(1.1) !important;
+			  transition: all 0.5s ease;
+			  cursor: pointer;
+
+			}
+		.imgAbout{
+			 background: rgba(250, 91, 15,.7)
+		}
+
+		.imgAbout img {
+			 opacity: 1;
+			 transition: opacity .25s ease-in-out;
+			 -moz-transition: opacity .25s ease-in-out;
+			 -webkit-transition: opacity .25s ease-in-out;
+			}
+
+		.imgAbout img:hover {
+ 		 opacity: 0.2;
+		}
+		
+		.img-wrap {
+			opacity:0.1;
+			line-height: 36px;
+			font-size: 50px
+			}
+	
+   		.img-wrap:hover{
+   			opacity: 1;
+   			-webkit-transform: scale(1.1) !important;
+			 transition: all 0.5s ease;
+			 cursor: pointer;
+   		}
+   
+	</style>
+	<body>
+<!-- Top section starts -->
+		<div class="container-fluid main-color py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center">
+						<img class="margin-negative-img " id="my_photo" src="./Ashaphoto.jpg" alt="asha photograph">
+					</div>
+					<div class="col-md-8 text-center pt-5 ">
+						<div class="selector">
+						<div class="ah-headline">
+						<span class="font-main text-white text-uppercase">Hi, There I'm</span><br>
+						<span  class="ah-words-wrapper">
+						<b class="font-main-bold text-white text-uppercase is-visible">A Developer</b>
+						<b class="font-main-bold text-white text-uppercase">Asha Singh</b>
+						<b class="font-main-bold text-white text-uppercase">Frontend </b>
+						</span>
+						</div>
+						</div>
+						<ul class="list-unstyled list-inline">
+
+				
+							<li  class="list-inline-item rounded-circle position-relative m-2 bg-white social-icons-parent"><i class="main-text-color fa-brands fa-facebook-f position-absolute top-50 start-50 translate-middle"></i></li>
+							<li class="list-inline-item rounded-circle position-relative m-2 bg-white social-icons-parent"><i class="fa-brands fa-twitter main-text-color position-absolute top-50 start-50 translate-middle"></i></li>
+							<li class="list-inline-item rounded-circle position-relative m-2 bg-white social-icons-parent"><i class="fa-brands fa-google-plus-g main-text-color position-absolute top-50 start-50 translate-middle"></i></li>
+							<li class="list-inline-item rounded-circle position-relative m-2 bg-white social-icons-parent"><i class="fa-brands fa-behance main-text-color position-absolute top-50 start-50 translate-middle"></i></li>
+							<li class="list-inline-item rounded-circle position-relative m-2 bg-white social-icons-parent"><i class="fa-brands fa-dribbble main-text-color position-absolute top-50 start-50 translate-middle"></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- Close fluid-container div  -->
+
+		
+		<!-- About Section Starts  -->
+		<section class="about-me m-5 p-5">
+			<div class="container">
+				<!-- Title Section Starts  -->
+				<div class="row text-center">
+					<div class="title m-3 position-relative">
+						<h2 class="center-align text-uppercase" >
+							<span class="inline-block">About</span>
+							<span class="inline-block main-text-color">Me</span>
+						</h2>
+						<span class="title-bg text-uppercase position-absolute">Resume</span>
+					</div>
+				</div>
+				<!-- Section Title Ends -->
+			</div>
+		</section>
+		<!-- About Section Ends -->
+		<!-- Resume Menu Starts -->
+		<div class="container">
+			<div class="row">
+				<!-- Resume-Menu Starts -->
+
+				<div class="col-md-4">
+					<div class="nav flex-column nav-pills me-3 " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<button class="nav-link active text-uppercase p-4 m-3 border border-2 grey-text-color" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa fa-vcard  ">...</i>&nbsp;&nbsp;&nbsp; My Profile</button>
+						<button class="nav-link text-uppercase p-4 m-3 border border-2 grey-text-color" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fa fa-briefcase ">...</i> &nbsp;&nbsp;&nbsp;Experience</button>
+						<button class="nav-link text-uppercase p-4 m-3 border border-2 grey-text-color" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fa fa-graduation-cap">...</i> &nbsp;&nbsp;&nbsp; Education</button>
+						<button class="nav-link text-uppercase p-4 m-3 border border-2 grey-text-color" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fa-solid fa-star "></i>&nbsp;&nbsp;&nbsp; Skill</button>
+					</div>
+				</div>
+				<!-- Resume-Menu ends -->
+				<div class="resume-card-container col-md-8">
+					<div class="tab-content" id="v-pills-tabContent">
+						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+							<div class="card ">
+								<div class="card-header p-4 text-uppercase text-center ">
+									<h4 class="card-title main-text-color"><i class="fa fa-vcard main-text-color">...</i>&nbsp; My Profile</h4>
+								</div>
+								<div class="card-body">
+
+									<p class="card-text second-font">I am self taught front end developer with an experience of 3 years in financial sector who is looking for opportunities in the web development domain.
+									I am a self taught programmer who is looking for opportunities to apply and enhance skills in the domain. Let it be Moore's law or Pareto principle, each one of them has its relevance and Iwish to utilize them.</p>
+									<!-- </div> -->
+									<div class="row">
+										<div class="col-md-6">
+											<ul class="list-unstyled second-font " >
+												<li class="p-2 mt-2 "><span class="fw-bold">First Name :</span>Asha</li>
+												<li class="p-2 mt-2"><span class="fw-bold">Last Name :</span> Singh</li>
+												<li class="p-2 mt-2"><span class="fw-bold">Date of Birth :</span>4 May </li>
+												<li class="p-2 mt-2"><span class="fw-bold">Job :</span> Front End developer </li>
+												<li class="p-2 mt-2"><span class="fw-bold">Nationality : </span>Indian </li>
+												<li class="p-2 mt-2"><span class="fw-bold">Freelancer : </span>Available</li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<ul class="list-unstyled second-font">
+												<li class="p-2 mt-2"><span  class="fw-bold">Phone Number : </span> +91 9793184194 ,7355980385</li>
+												<li class="p-2 mt-2"><span  class="fw-bold">Residence : </span>Gurugram , Harayana</li>
+												<li class="p-2 mt-2"><span  class="fw-bold">Email : </span>ashasingh512@gmail.com</li>
+												<li class="p-2 mt-2"><span  class="fw-bold">Spoken Languages : </span> Hindi , English </li>
+												<li class="p-2 mt-2"><span  class="fw-bold">Skype : </span>Available </li>
+												<li class="p-2 mt-2"><span  class="fw-bold">Whatsapp : </span> : +91 9793184194</li>
+											</ul>
+										</div>
+									</div>
+									<div class="d-flex space-between">
+										<a href="#" class="btn btn-primary border btn-down  rounded-0 mx-5 main-color p-2"><i class="fa-solid fa-file-pdf px-1"></i></i>Download My Resume</a>
+										<a href="#" class="btn btn-light btn-sec-light rounded-0 mx-5 p-2"><i class="fa-solid fa-pen-to-square "></i>Visit My Blog</a>
+
+									</div>
+								</div> <!-- Closing of card body-->
+							</div> <!-- Closing of card -->
+						</div>
+						<!-- Closing of Profile card -->
+						<!-- Opening of Experience card -->
+						<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+							<div class="card ">
+								<div class="card-header p-4 text-uppercase text-center main-text-color">
+									<h4 class="card-title"><i class="fa fa-briefcase">...</i>&nbsp; Experience</h4>
+								</div>
+								<div class="card-body">
+									<h6 class="card-title text-uppercase">Front End developer-Planify Limited</h6>
+									<p><i class="fa-light fa fa-calendar"> </i> &nbsp;2022 - Present </p>
+									<p class="card-text second-font">Gives advises on stocks, wealth preservation, wealth transfer, wealth management and wealth growth.</p>
+									<span class="seperator main-text-color">____________</span>
+									<p></p>
+									<h6 class="card-title text-uppercase">Wealth Manager-Planify Limited</h6>
+									<p><i class="fa-light fa fa-calendar"> </i>&nbsp; 2020 - 2022 </p>
+									<p class="card-text second-font">Gives advises on stocks, wealth preservation, wealth transfer, wealth management and wealth growth.</p>
+									<span class="seperator main-text-color">____________</span>
+									<p></p>
+									<h6 class="card-title text-uppercase">Senior Sales Consultant-Policybazaar</h6>
+									<p><i class="fa-light fa fa-calendar"></i>&nbsp; 2018 - 2020 </p>
+									<p class="card-text second-font">Responsible for attracting new sales on financial products for Domestic and NRI clients.Provided advice to the clients on their queries on Financial products</p>
+									<span class="seperator main-text-color ">____________ </span>
+									<p></p>
+								</div>
+								<!-- Closing of card body  -->
+							</div>
+							<!-- Closing of card  -->
+						</div>
+						<!-- Closing of Experience card -->
+
+						<!-- Opening of Education div -->
+						<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							<div class="card ">
+								<div class="card-header p-4 text-uppercase text-center main-text-color">
+									<h4 class="card-title"><i class="fa fa-graduation-cap">...</i>&nbsp;Education</h4>
+								</div>
+								<div class="card-body second-font">
+									<h6 class="card-title text-uppercase">Bachelor of Technology (Information Technology) - United College of Engineering </h6>
+									<p><i class="fa-light fa fa-calendar"> </i> 2014 - 2018 </p>
+									<p class="card-text">With Information Technology Branch - 75.32% </p>
+									<span class="seperator main-text-color">____________</span>
+									<p></p>
+									<h6 class="card-title text-uppercase">Senior Secondary - Maharishi Vidya mandir</h6>
+									<p><i class="fa-light fa fa-calendar  "> </i>2012 - 2013 </p>
+									<p class="card-text">PCM with Computer Science - 69 % </p>
+									<span class="seperator ">____________</span>
+									<p></p>
+									<h6 class="card-title text-uppercase">High School- Maharishi Vidya Mandir</h6>
+									<p><i class="fa-light fa fa-calendar "></i>2010 - 2011 </p>
+									<p class="card-text">8.6 CGPA</p>
+									<span class="seperator main-text-color ">____________ </span>
+									<p></p>
+								</div>
+								<!-- Closing of card body  -->
+							</div>
+							<!-- Closing of card  -->
+						</div>
+						<!-- Opening of Skill div -->
+						<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+							<div class="card ">
+								<div class="card-header p-4 text-uppercase text-center main-text-color">
+									<h4 class="card-title "><i class="fa-solid fa-star "></i>&nbsp; Skills </h4>
+								</div>
+								<div class="card-body">
+									<div class="row text-uppercase">
+										<div class="col-md-6 second-font">
+											<p class="h6">javascript</p>
+											<p class="main-text-color"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+
+											<p class="h6">javascript</p>
+											<p class="main-text-color"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+
+											<p class="h6">CSS/Css3</p>
+											<p class="main-text-color"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+
+											<p class="h6">bootstrap</p>
+											<p class="main-text-color"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+										</div>
+										<div class="col-md-6 second-font">
+											<p class="h6">C++</p>
+											<p class="main-text-color"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+
+											<p class="h6">CSS/CSS3</p>
+											<p class="main-text-color"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+
+											<p class="h6">JQuery</p>
+											<p class="main-text-color"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Closing of card div -->
+						</div>
+						<!-- Closing of Skill div -->
+					</div>
+
+				</div>
+				<!-- Resume row div closed -->
+			</div>
+			<!-- Resume container div closed -->
+		</div>
+
+
+		<!-- Counting Number background -->
+		<div class="container-fluid main-color p-5 mt-5 numbers ">
+			<div class="row white-text-color">
+				<div class="col text-center">
+					<i class="fa fa-briefcase h3">...</i>
+					<h1 class=""><span class="running-number">7</span> <span>+</span></h1>
+					<p class="h5 text-uppercase">Years Experience</p>
+				</div>
+				<div class="col text-center">
+					<i class="fa fa-code h3">...</i>
+					<h1><span class="running-number">99 </span><span>+</span></h1>
+					<p class="h5 text-uppercase">Web Project</p>
+				</div>
+				<div class="col">
+					<div class="col text-center">
+						<i class="fa-solid fa-heart h3"></i>
+						<h1 ><span class="running-number">99 </span><span>+</span></h1>
+						<p class="h5 text-uppercase">Happy Customer</p>
+					</div>
+				</div>
+			</div>
+			<!-- CLosing of row div     -->
+		</div>
+		<!-- closing of Fluid container -->
+
+		<!-- Starting of My work portfolio -->
+		<section class="about-me m-5 p-5">
+			<div class="container">
+				<!-- Title Section Starts  -->
+				<div class="row text-center">
+					<div class="title m-3 position-relative">
+						<h2 class="center-align text-uppercase" >
+							<span class="inline-block">My</span>
+							<span class="inline-block main-text-color">Portfolio</span>
+						</h2>
+						<span class="title-bg text-uppercase position-absolute bottom-50">Work</span>
+					</div>
+				</div>
+				<!-- Section Title Ends -->
+				<!-- Resume Section Starts -->
+			</div>
+		</section>
+
+		<!-- Closing of div of the my work  -->
+		<!-- Opening of my work card gallery -->
+		<div class="container">
+			<div class="row row-cols-1 row-cols-md-2 g-4 text-center">
+				<!-- Why these are used -->
+				<div class="col-md-4">
+					<div class="card border-0">
+						<div class="imgAbout position-relative">
+							<a class="test-popup-link" href="IMG_20211017_071340.jpg" title="Image project"><img src="IMG_20211017_071340.jpg" width="416" height="234"  class="card-img-top custom-hover "  alt="..."></a>
+							<div class="position-absolute top-50 start-50 translate-middle img-wrap">
+								<i class="fa-solid fa-magnifying-glass white-text-color"></i>
+							</div>
+						</div>
+						<div class="card-body text-start px-0">
+							<div class="caption p-2"><h6 class="card-title font-weight-bold px-2"><b>IMAGE PROJECT</b></h6></div>
+							<p class="card-text second-font">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card border-0">
+						<div class="imgAbout">
+						<a class="test-popup-link" href="project1.jpg" title="Youtube project"><img src="project1.jpg" width="416" height="234"  class="card-img-top custom-hover "  alt="..."></a>
+						</div>
+						<div class="card-body  text-start px-0">
+							<div class="caption p-2"><h6 class="card-title font-weight-bold px-2"><b>YOUTUBE PROJECT</b></h6></div>
+							<p class="card-text second-font">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card border-0">
+						<div class="imgAbout">
+						<a class="test-popup-link" href="image1.jpeg" title="Gallery Photo"><img src="image1.jpeg" width="416" height="234"  class="card-img-top custom-hover "  alt="..."></a>
+						 </div>
+						<div class="card-body  text-start px-0">
+							<div class="caption p-2"><h6 class="card-title font-weight-bold px-2"><b>GALLERY PHOTO</b></h6></div>
+							<p class="card-text second-font">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card border-0">
+						<div class="imgAbout">
+						<img src="https://picsum.photos/416/234?random=6" class="card-img-top" alt="...">
+						</div>
+
+						<div class="card-body  text-start px-0">
+							<div class="caption p-2"><h6 class="card-title font-weight-bold px-2"><b>EXTERNAL LINK</b></h6></div>
+							<p class="card-text second-font">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 ">
+					<div class="card border-0">
+						<div class="imgAbout">
+						<img src="https://picsum.photos/416/234?random=7" class="card-img-top"  alt="...">
+					</div>
+						<div class="card-body  text-start px-0">
+							<div class="caption p-2"><h6 class="card-title font-weight-bold px-2"><b>IMAGE PROJECT</b></h6></div>
+							<p class="card-text second-font">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card border-0">
+						<div class="imgAbout">
+						<img src="https://picsum.photos/416/234?random=6" class="card-img-top" alt="...">
+						</div>
+						<div class="card-body  text-start px-0">
+							<div class="caption p-2"><h6 class="card-title font-weight-bold px-2"><b>YOUTUBE PROJECT</b></h6></div>
+							<p class="card-text second-font">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Closing of row work gallery -->
+		</div>
+		<!-- Closing of container dov of work gallery -->
+		<!-- Opening of fluid carousel -->
+		<div class="container-fluid main-color">
+			<div class="row">
+				<!-- <div class="col-md-12 p-2"> -->
+					<div class="col-md-10 mx-auto">
+						<div class="owl-carousel owl-theme" id="testimonialsSlider">
+
+							<div class="item ">
+								<div class="row pt-3">
+									<div class="col-md-4 mx-auto">
+										<img src="https://picsum.photos/234/234?random=8" id="my_photo" class="d-block rounded-circle mx-auto" height="150" width="150" alt="...">
+									</div>
+									<div class="w-100"></div>
+									<div class="text-center white-text-color pt-3">
+										<p>Mark adds tremendous value working either individually or in a team framework. he is a talented writer who is bright, highly motivated and known for her on-time delivery. he is a joy to be around with her quick wit and optimism.</p>
+										<h6 class="font-weight-bolder">MISS ELINA POOL</h6>
+										<p class=""> Developer - Adobe</p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row pt-3">
+									<div class="col-md-4 mx-auto ">
+										<img src="https://picsum.photos/234/234?random=6" id="my_photo" class="d-block rounded-circle mx-auto" height="150" width="150" alt="...">
+									</div>
+									<div class="w-100"></div>
+									<div class="text-center white-text-color pt-3">
+										<p>Mark adds tremendous value working either individually or in a team framework. he is a talented writer who is bright, highly motivated and known for her on-time delivery. he is a joy to be around with her quick wit and optimism.</p>
+										<h6 class="font-weight-bolder">MISS ELINA POOL</h6>
+										<p class=""> Developer - Adobe</p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row pt-3">
+									<div class="col-md-4 mx-auto white-text-color">
+										<img src="https://picsum.photos/234/234?random=5" id="my_photo" class="d-block rounded-circle mx-auto" height="150" width="150" alt="...">
+									</div>
+									<div class="w-100"></div>
+									<div class="text-center white-text-color pt-3">
+										<p>Mark adds tremendous value working either individually or in a team framework. he is a talented writer who is bright, highly motivated and known for her on-time delivery. he is a joy to be around with her quick wit and optimism.</p>
+										<h6 class="font-weight-bolder">MISS ELINA POOL</h6>
+										<p class=""> Developer - Adobe</p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row pt-3">
+									<div class="col-md-4 mx-auto ">
+										<img src="https://picsum.photos/234/234?random=4" id="my_photo" class="d-block rounded-circle mx-auto" height="150" width="150" alt="...">
+									</div>
+									<div class="w-100"></div>
+									<div class="text-center white-text-color pt-3">
+										<p>Mark adds tremendous value working either individually or in a team framework. he is a talented writer who is bright, highly motivated and known for her on-time delivery. he is a joy to be around with her quick wit and optimism.</p>
+										<h6 class="font-weight-bolder">MISS ELINA POOL</h6>
+										<p class=""> Developer - Adobe</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- CLosing of carousel div     -->
+				</div>
+				<!-- closing of Fluid container -->
+				<!-- Latest Section Starts  -->
+				<section class="about-me m-5 p-5">
+					<div class="container">
+						<!-- Title Section Starts  -->
+						<div class="row text-center">
+							<div class="title m-3 position-relative top-50 ">
+								<h2 class="center-align text-uppercase" >
+									<span class="inline-block">Latest</span>
+									<span class="inline-block main-text-color">Post</span>
+								</h2>
+								<span class="title-bg text-uppercase position-absolute">Artiloes</span>
+							</div>
+						</div>
+						<!-- Section Latest list Ends -->
+					</div>
+				</section>
+				<!-- Latest list Section Ends -->f
+
+				<!-- Latest Post div Starts -->
+				<!-- Opening of my work card gallery -->
+				<div class="container">
+					<div class="row row-cols-1 row-cols-md-2 g-4 text-center">
+						<!-- Why these are used -->
+						<div class="col-md-4 ">
+							<div class="card border-0 position-relative latest-img img-fluid">
+								<img src="https://picsum.photos/416/234?random=5" class="card-img-top" alt="...">
+								<div class="post-date main-color position-absolute top-0 end-0 m-1">
+									<div class="white-text-color p-1">
+										<span>01</span><br>
+										<span>JAN</span>
+									</div>
+								</div>
+								<div class="card-body text-start">
+									<h5 class="card-title font-weight-bold "><b>HOW TO BE A GOOD FREELANCER?</b></h5>
+									<p class="card-text second-font">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 ">
+							<div class="card border-0 position-relative latest-img img-fluid">
+								<img src="https://picsum.photos/416/234?random=6" class="card-img-top " alt="...">
+								<div class="post-date main-color position-absolute top-0 end-0 m-1">
+									<div class="white-text-color p-1">
+										<span>19</span><br>
+										<span>FEB</span>
+									</div>
+								</div>
+								<div class="card-body text-start">
+
+									<h5 class="card-title font-weight-bold "><b>COLLABORATION WITH ENVATO</b></h5>
+									<p class="card-text second-font">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 ">
+							<div class="card border-0 position-relative latest-img img-fluid">
+								<img src="https://picsum.photos/416/234?random=7" class="card-img-top" alt="...">
+								<div class="post-date main-color position-absolute top-0 end-0 m-1">
+									<div class="white-text-color p-1">
+										<span>23</span><br>
+										<span>MAR</span>
+									</div>
+								</div>
+								<div class="card-body text-start">
+									<h5 class="card-title font-weight-bold "><b>WHY THEMEFOREST IS THE BEST?</b><h5>
+									<p class="card-text second-font">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Closing of row Latest row gallery Ends -->
+
+				<!-- Moving nav header background -->
+				<div class="fluid-container main-color my-0 mt-5 p-5">
+					<div class="row white-text-color">
+						<div class="owl-carousel owl-theme" id="speedCarousel">
+							<div class="item">
+								<div class="col text-center">
+									<p class="h5 text-uppercase">Years Experience</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col text-center">
+									<p class="h5 text-uppercase">Web Project</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col text-center">
+									<p class="h5 text-uppercase">Years Experience</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- CLosing of row div     -->
+				</div>
+				<!-- closing of Fluid container -->
+
+				<!-- Get In touch Section Starts  -->
+				<section class="about-me m-5 p-5">
+					<div class="container">
+						<!-- Title Section Starts  -->
+						<div class="row text-center">
+							<div class="title m-3 position-relative top-50 ">
+								<h2 class="center-align text-uppercase" >
+									<span class="inline-block">Get</span>
+									<span class="inline-block main-text-color">In Touch</span>
+								</h2>
+								<span class="title-bg text-uppercase position-absolute">Contact</span>
+							</div>
+						</div>
+						<!-- Section Latest list Ends -->
+					</div>
+				</section>
+				<!--Get in Touch Section Ends -->
+				<!-- Drop a message div stared -->
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-xs-12 border-1">
+							<div class="mb-3 ">
+								<h3 class="font-weight-bold">FEEL FREE TO DROP ME A MESSAGE</h3>
+								<p class="mb-3 font-weight-light second-font">Need to speak to me? Do you have any queries or suggestions? or even you want to say Hello ! Please contact me about all enquiries using the form below.</p>
+								<div class="row">
+									<div class="col-6 second-font mb-3">
+
+										<input type="text" class="form-control bg-light rounded-0" id="name_Input0" placeholder="YOUR NAME">  </div>
+										<div class="col-6">
+
+											<input type="email" class="form-control bg-light rounded-0" id="exampleFormControlInput1" placeholder="YOUR EMAIL"></div>
+										</div>
+									</div>
+									<div class="mb-3">
+										<textarea class="form-control bg-light rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="YOUR MESSAGE"></textarea>
+									</div>
+									<button type="button" class="btn main-color white-text-color text-uppercase">Send Message</button>
+								</div>
+								<div class="col-md-4 bg-light p-3">
+									<div class="row p-3">
+										<h5><i class="fa-solid fa-house main-text-color"></i>&nbsp;&nbsp; RESIDENCE </h5>
+										<p class="second-font px-5">Q248 South City 1 Sector 40 Gurugram, Harayana </p>
+									</div>
+									<div class="row p-3">
+										<h5><i class="fa-solid fa-phone main-text-color"></i>&nbsp;&nbsp; PHONE NUMBER</h5>
+										<p class="second-font  px-5"> +91 9793184194 </p>
+									</div>
+									<div class="row p-3">
+										<h5><i class="fa-solid fa-envelope main-text-color "></i>&nbsp;&nbsp; EMAIL</h5>
+										<p class="second-font px-5">ASHASINGH512@gmail.COM </p>
+									</div>
+									<div class="row p-3">
+										<h5><i class="fa-solid fa-share-nodes main-text-color"></i>&nbsp;&nbsp; SOCIAL</h5>
+										<!-- Social Media Icon -->
+
+										<ul class="list-unstyled d-flex px-5">
+											<li style="height: 2rem; width: 2rem; background: #3b5998" class="rounded-circle position-relative m-2 "><i class="white-text-color fa-brands fa-facebook-f position-absolute top-50 start-50 translate-middle"></i></li>
+											<li style="height: 2rem; width: 2rem; background: #1da1f2" class="rounded-circle position-relative m-2"><i class="fa-brands fa-twitter white-text-color position-absolute top-50 start-50 translate-middle"></i></li>
+											<li style="height: 2rem; width: 2rem; background: #dd4b39;" class="rounded-circle position-relative m-2"><i class="fa-brands fa-google-plus-g white-text-color position-absolute top-50 start-50 translate-middle"></i></li>
+										</ul>
+
+										<!-- Social Media Icon -->
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+						<footer class="bg-light">
+							<div class="container mt-5 ">
+								<div class="row">
+									<div class="col-xs-12 text-center p-2">
+										<!-- copyright text start from here -->
+										<p class="text-center second-font">Copyright © 2018 Maryouma All Rights Reserved | Created with Love by <span class="main-text-color">celtano<span>
+										</p>
+										<!-- copyright text end here -->
+									</div>
+								</div>
+							</div>
+						</footer>
+
+						<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+						<script src="./jquery.animatedheadline.min.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+						<!-- Running number js code -->
+
+						<script>
+								$(window).on('scroll', function(e) {
+									function numberWithCommas(x) {
+										return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+									}
+									if ($(window).scrollTop() >= ($(".numbers").offset().top - ($(window).height()))) {
+										if (!$(".numbers").hasClass("animated")) {
+
+											$('.running-number').each(function() {
+												$(this).prop('Counter', 0).animate({
+													Counter: $(this).text()
+												}, {
+													duration: 4000,
+													easing: 'swing',
+													step: function(now) {
+														$(this).text(numberWithCommas(Math.ceil(now)));
+													}
+												});
+											});
+											$(".numbers").addClass("animated");
+										}
+									}
+								});
+						</script>
+
+						<script  type="text/javascript">
+							$('#testimonialsSlider').owlCarousel({
+								loop:true,
+								margin:10,
+								nav:false,
+								autoplay: true,
+								autoplayTimeout: 5000,
+								items:1,
+							})
+							$('#speedCarousel').owlCarousel({
+								loop:true,
+								margin:10,
+								nav:true,
+								autoplay: true,
+								autoplayTimeout: 1000,
+								responsive:{
+									0:{
+										items:1
+									},
+									600:{
+										items:3
+									},
+									1000:{
+										items:5
+									}
+								}
+							})
+						</script>
+						<script>
+			  				 $(function() {
+			       				 $('.selector').animatedHeadline({
+			     		       animationType: 'clip'
+			     			 			  }
+			      				  );
+			  					  })
+						</script>
+						<script type="text/javascript">
+							$('.test-popup-link').magnificPopup({
+  								type: 'image'
+  								// other options
+							});
+						</script>
+					</body>
+					</html>
